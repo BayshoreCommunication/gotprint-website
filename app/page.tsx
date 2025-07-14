@@ -31,7 +31,7 @@ import {
   FileText,
   Printer,
   Package,
-  Palette
+  Palette,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -46,8 +46,8 @@ export default function HomePage() {
       setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   function getMenuCategories(activeMenu: string) {
@@ -219,7 +219,12 @@ export default function HomePage() {
         "Custom Invoice Books / Receipt Books",
         "Notepads with Branding",
       ],
-      icon: "💼",
+      image_src: [
+        "/images/services/business-essentials/business-card-printing.png",
+        "/images/services/business-essentials/letterhead-&-envelope-printing.png",
+        "/images/services/business-essentials/Custom-Invoice-Books-Receipt-Books.png",
+        "/images/services/business-essentials/Notepads-with-Branding.png",
+      ],
       color: "bg-blue-50 border-blue-200",
     },
     {
@@ -231,7 +236,12 @@ export default function HomePage() {
         "Door Hangers for Real Estate & Local Services",
         "Sales Sheets / One-Pagers",
       ],
-      icon: "📈",
+      image_src: [
+        "/images/services/Marketing-&-Sales-Materials/Flyers-&-Brochures.png",
+        "/images/services/Marketing-&-Sales-Materials/postcards.png",
+        "/images/services/Marketing-&-Sales-Materials/DoorHangers.png",
+        "/images/services/Marketing-&-Sales-Materials/SalesSheets.png",
+      ],
       color: "bg-green-50 border-green-200",
     },
     {
@@ -243,7 +253,12 @@ export default function HomePage() {
         "Hang Tags for Apparel or Products",
         "Branded Shopping Bags (Paper)",
       ],
-      icon: "📦",
+      image_src: [
+        "/images/services/Retail-Packaging-Materials/Custom-Labels-&-Stickers.png",
+        "/images/services/Retail-Packaging-Materials/Thank-You-Cards.png",
+        "/images/services/Retail-Packaging-Materials/HangTags.png",
+        "/images/services/Retail-Packaging-Materials/Branded-Shopping-Bags.png",
+      ],
       color: "bg-purple-50 border-purple-200",
     },
     {
@@ -255,7 +270,12 @@ export default function HomePage() {
         "Table Covers / Tents for Trade Shows",
         "Custom Tickets, Badges, Wristbands",
       ],
-      icon: "🎪",
+      image_src: [
+        "/images/services/Event-Promotional-Printing/EventBanners.png",
+        "/images/services/Event-Promotional-Printing/Backdrops-for-Events.png",
+        "/images/services/Event-Promotional-Printing/Tents-for-Trade-Shows.png",
+        "/images/services/Event-Promotional-Printing/Wristbands.png",
+      ],
       color: "bg-orange-50 border-orange-200",
     },
     {
@@ -266,7 +286,7 @@ export default function HomePage() {
         "Storefront Window Decals",
         "A-frame Sidewalk Signs",
       ],
-      icon: "🪧",
+      image_src: "🪧",
       color: "bg-red-50 border-red-200",
     },
     {
@@ -277,7 +297,7 @@ export default function HomePage() {
         "Employee Uniform Printing",
         "Branded Tote Bags or Mugs",
       ],
-      icon: "👕",
+      image_src: "👕",
       color: "bg-indigo-50 border-indigo-200",
     },
     {
@@ -289,7 +309,7 @@ export default function HomePage() {
         "Property Info Flyers",
         "Custom Key Hand-off Boxes / Folder Kits",
       ],
-      icon: "🏠",
+      image_src: "🏠",
       color: "bg-teal-50 border-teal-200",
     },
     {
@@ -301,7 +321,7 @@ export default function HomePage() {
         "Consent Forms / Intake Forms",
         "Client Welcome Folders",
       ],
-      icon: "⚕️",
+      image_src: "⚕️",
       color: "bg-cyan-50 border-cyan-200",
     },
     {
@@ -313,7 +333,7 @@ export default function HomePage() {
         "Menus, Programs, Table Numbers",
         "Custom Thank You Cards",
       ],
-      icon: "💒",
+      image_src: "💒",
       color: "bg-pink-50 border-pink-200",
     },
     {
@@ -324,7 +344,7 @@ export default function HomePage() {
         "Custom Calendars",
         "Greeting Cards (Seasonal / Branded)",
       ],
-      icon: "📝",
+      image_src: "📝",
       color: "bg-yellow-50 border-yellow-200",
     },
   ];
@@ -340,36 +360,42 @@ export default function HomePage() {
     {
       icon: Shield,
       title: "Quality Guarantee",
-      description: "100% satisfaction guarantee on all our printing services"
+      description: "100% satisfaction guarantee on all our printing services",
     },
     {
       icon: Zap,
       title: "Fast Turnaround",
-      description: "Express printing options available for urgent orders"
+      description: "Express printing options available for urgent orders",
     },
     {
       icon: Truck,
       title: "Free Shipping",
-      description: "Free shipping on orders over $75 across the US"
+      description: "Free shipping on orders over $75 across the US",
     },
     {
       icon: Award,
       title: "Award Winning",
-      description: "Recognized for excellence in printing quality and service"
-    }
+      description: "Recognized for excellence in printing quality and service",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Enhanced Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-lg'
-        : 'bg-white/90 backdrop-blur-sm border-b border-gray-200/30'
-        }`}>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-lg"
+            : "bg-white/90 backdrop-blur-sm border-b border-gray-200/30"
+        }`}
+      >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
-              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-green-600 bg-clip-text text-transparent">
+              <Link
+                href="/"
+                className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-green-600 bg-clip-text text-transparent"
+              >
                 GotPrint
               </Link>
               <nav className="hidden lg:flex space-x-6">
@@ -427,7 +453,6 @@ export default function HomePage() {
                 </Button>
               </div>
 
-
               {/* Mobile Menu Button */}
               <Button
                 variant="ghost"
@@ -435,7 +460,11 @@ export default function HomePage() {
                 className="lg:hidden"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
-                {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {isMobileMenuOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
               </Button>
             </div>
           </div>
@@ -487,13 +516,16 @@ export default function HomePage() {
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="ml-2 text-sm text-gray-600">4.9/5</span>
+                        <span className="ml-2 text-sm text-gray-600">
+                          4.9/5
+                        </span>
                       </div>
                       <h4 className="font-semibold text-gray-900 mb-2">
                         Premium Business Cards
                       </h4>
                       <p className="text-sm text-gray-600 mb-4">
-                        Professional business cards on premium paper stock. Starting at $19.99 for 250 cards.
+                        Professional business cards on premium paper stock.
+                        Starting at $19.99 for 250 cards.
                       </p>
                       <Button
                         size="sm"
@@ -524,7 +556,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="space-y-2">
-                  {["Print Products", "Marketing Materials", "Specialty Items", "Industries"].map((item) => (
+                  {[
+                    "Print Products",
+                    "Marketing Materials",
+                    "Specialty Items",
+                    "Industries",
+                  ].map((item) => (
                     <button
                       key={item}
                       className="w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
@@ -573,8 +610,9 @@ export default function HomePage() {
                 </h1>
 
                 <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                  From business cards to marketing materials, we deliver high-quality printing
-                  with fast turnaround times and competitive pricing. Join over 500,000 satisfied customers.
+                  From business cards to marketing materials, we deliver
+                  high-quality printing with fast turnaround times and
+                  competitive pricing. Join over 500,000 satisfied customers.
                 </p>
               </div>
 
@@ -601,11 +639,15 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-6 pt-8">
                 <div className="flex items-center space-x-2">
                   <Shield className="w-5 h-5 text-green-600" />
-                  <span className="text-sm text-gray-600">100% Quality Guarantee</span>
+                  <span className="text-sm text-gray-600">
+                    100% Quality Guarantee
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Truck className="w-5 h-5 text-blue-600" />
-                  <span className="text-sm text-gray-600">Free Shipping $75+</span>
+                  <span className="text-sm text-gray-600">
+                    Free Shipping $75+
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Clock className="w-5 h-5 text-orange-600" />
@@ -623,8 +665,12 @@ export default function HomePage() {
                     <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl mb-4">
                       <Printer className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Business Cards</h3>
-                    <p className="text-sm text-gray-600">Professional business cards starting at $19.99</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">
+                      Business Cards
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      Professional business cards starting at $19.99
+                    </p>
                   </div>
 
                   <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:scale-105 ml-8">
@@ -632,7 +678,9 @@ export default function HomePage() {
                       <FileText className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="font-semibold text-gray-900 mb-2">Flyers</h3>
-                    <p className="text-sm text-gray-600">Eye-catching flyers for marketing campaigns</p>
+                    <p className="text-sm text-gray-600">
+                      Eye-catching flyers for marketing campaigns
+                    </p>
                   </div>
                 </div>
 
@@ -641,16 +689,24 @@ export default function HomePage() {
                     <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl mb-4">
                       <Package className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Packaging</h3>
-                    <p className="text-sm text-gray-600">Custom packaging solutions for retail</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">
+                      Packaging
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      Custom packaging solutions for retail
+                    </p>
                   </div>
 
                   <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300 hover:scale-105">
                     <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl mb-4">
                       <Palette className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Banners</h3>
-                    <p className="text-sm text-gray-600">Large format banners for events</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">
+                      Banners
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      Large format banners for events
+                    </p>
                   </div>
                 </div>
               </div>
@@ -660,7 +716,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -670,16 +726,18 @@ export default function HomePage() {
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">
+                  {stat.number}
+                </div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -704,7 +762,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
       <main className="py-16 bg-white">
@@ -751,20 +809,39 @@ export default function HomePage() {
                         .replace(/[^a-z0-9]+/g, "-")
                         .replace(/-+$/, "");
 
+                      // Get the corresponding image for this service
+                      const serviceImage =
+                        category.image_src[
+                          serviceIndex % category.image_src.length
+                        ];
+
                       return (
-                        <Link key={serviceIndex} href={`/services/${serviceSlug}`}>
+                        <Link
+                          key={serviceIndex}
+                          href={`/services/${serviceSlug}`}
+                        >
                           <Card className="group hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-teal-300 h-full w-full max-w-sm mx-auto overflow-hidden">
                             <CardContent className="p-6">
-                              <div className="aspect-square mb-4 bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl overflow-hidden flex items-center justify-center group-hover:from-teal-100 group-hover:to-teal-200 transition-all duration-300">
+                              <div className="aspect-square mb-4 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg overflow-hidden flex items-center justify-center group-hover:from-teal-100 group-hover:to-teal-200 transition-all duration-300">
                                 <div className="text-5xl group-hover:scale-110 transition-transform duration-300">
-                                  {category.icon}
+                                  <Image
+                                    src={serviceImage}
+                                    alt={service.split(" (")[0]}
+                                    width={400}
+                                    height={400}
+                                    className="w-full h-full object-contain"
+                                  />
                                 </div>
                               </div>
                               <h4 className="font-semibold text-gray-900 text-center text-sm lg:text-base leading-tight min-h-[2.5rem] flex items-center justify-center mb-3">
                                 {service.split(" (")[0]}
                               </h4>
                               <div className="text-center">
-                                <Button variant="ghost" size="sm" className="text-teal-600 hover:text-teal-700 group-hover:bg-teal-50">
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  className="text-teal-600 hover:text-teal-700 group-hover:bg-teal-50"
+                                >
                                   View Details
                                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" />
                                 </Button>
@@ -790,8 +867,9 @@ export default function HomePage() {
               Ready to Start Your Print Project?
             </h2>
             <p className="text-xl mb-8 text-teal-100">
-              Join over 500,000 satisfied customers who trust us with their printing needs.
-              Upload your design or choose from our professional templates.
+              Join over 500,000 satisfied customers who trust us with their
+              printing needs. Upload your design or choose from our professional
+              templates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -801,7 +879,7 @@ export default function HomePage() {
                 <Target className="w-5 h-5 mr-2" />
                 Start Your Order
               </Button>
-              <Button
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 text-lg font-semibold"
@@ -814,7 +892,7 @@ export default function HomePage() {
                 className="border-2 border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 text-lg font-semibold"
               >
                 Request Quote
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
