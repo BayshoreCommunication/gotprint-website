@@ -286,7 +286,11 @@ export default function HomePage() {
         "Storefront Window Decals",
         "A-frame Sidewalk Signs",
       ],
-      image_src: "🪧",
+      image_src: [
+        "/images/services/Signage/Yard-Signs.png",
+        "/images/services/Signage/Storefront-Window-Decals.png",
+        "/images/services/Signage/A-frame-Sidewalk-Signs.png",
+      ],
       color: "bg-red-50 border-red-200",
     },
     {
@@ -297,7 +301,12 @@ export default function HomePage() {
         "Employee Uniform Printing",
         "Branded Tote Bags or Mugs",
       ],
-      image_src: "👕",
+      image_src: [
+        "/images/services/Apparel-Merch/Custom-T-Shirts-Hoodies-Caps.png",
+        "/images/services/Apparel-Merch/Uniform-Printing.png",
+        "/images/services/Apparel-Merch/HangTags.png",
+        "/images/services/Apparel-Merch/Branded-Shopping-Bags.png",
+      ],
       color: "bg-indigo-50 border-indigo-200",
     },
     {
@@ -309,7 +318,12 @@ export default function HomePage() {
         "Property Info Flyers",
         "Custom Key Hand-off Boxes / Folder Kits",
       ],
-      image_src: "🏠",
+      image_src: [
+        "/images/services/Retail-Packaging-Materials/Custom-Labels-&-Stickers.png",
+        "/images/services/Retail-Packaging-Materials/Thank-You-Cards.png",
+        "/images/services/Retail-Packaging-Materials/HangTags.png",
+        "/images/services/Retail-Packaging-Materials/Branded-Shopping-Bags.png",
+      ],
       color: "bg-teal-50 border-teal-200",
     },
     {
@@ -321,7 +335,12 @@ export default function HomePage() {
         "Consent Forms / Intake Forms",
         "Client Welcome Folders",
       ],
-      image_src: "⚕️",
+      image_src: [
+        "/images/services/Retail-Packaging-Materials/Custom-Labels-&-Stickers.png",
+        "/images/services/Retail-Packaging-Materials/Thank-You-Cards.png",
+        "/images/services/Retail-Packaging-Materials/HangTags.png",
+        "/images/services/Retail-Packaging-Materials/Branded-Shopping-Bags.png",
+      ],
       color: "bg-cyan-50 border-cyan-200",
     },
     {
@@ -333,7 +352,12 @@ export default function HomePage() {
         "Menus, Programs, Table Numbers",
         "Custom Thank You Cards",
       ],
-      image_src: "💒",
+      image_src: [
+        "/images/services/Retail-Packaging-Materials/Custom-Labels-&-Stickers.png",
+        "/images/services/Retail-Packaging-Materials/Thank-You-Cards.png",
+        "/images/services/Retail-Packaging-Materials/HangTags.png",
+        "/images/services/Retail-Packaging-Materials/Branded-Shopping-Bags.png",
+      ],
       color: "bg-pink-50 border-pink-200",
     },
     {
@@ -344,7 +368,12 @@ export default function HomePage() {
         "Custom Calendars",
         "Greeting Cards (Seasonal / Branded)",
       ],
-      image_src: "📝",
+      image_src: [
+        "/images/services/Retail-Packaging-Materials/Custom-Labels-&-Stickers.png",
+        "/images/services/Retail-Packaging-Materials/Thank-You-Cards.png",
+        "/images/services/Retail-Packaging-Materials/HangTags.png",
+        "/images/services/Retail-Packaging-Materials/Branded-Shopping-Bags.png",
+      ],
       color: "bg-yellow-50 border-yellow-200",
     },
   ];
