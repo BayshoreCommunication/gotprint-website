@@ -50,165 +50,6 @@ export default function HomePage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  function getMenuCategories(activeMenu: string) {
-    const menuData = {
-      "Print Products": [
-        {
-          title: "Business Essentials",
-          items: [
-            { name: "Business Card Printing", icon: "💼" },
-            { name: "Letterhead & Envelope Printing", icon: "✉️" },
-            { name: "Custom Invoice Books", icon: "📋" },
-            { name: "Notepads with Branding", icon: "📝" },
-          ],
-        },
-        {
-          title: "Invitations & Stationery",
-          items: [
-            { name: "Wedding Invitations", icon: "💒" },
-            { name: "Greeting Cards", icon: "🎉" },
-            { name: "Postcards", icon: "📮" },
-            { name: "Thank You Cards", icon: "🙏" },
-          ],
-        },
-        {
-          title: "Stickers & Labels",
-          items: [
-            { name: "Custom Labels & Stickers", icon: "🏷️" },
-            { name: "Product Labels", icon: "📦" },
-            { name: "QR Code Labels", icon: "📱" },
-            { name: "Packaging Inserts", icon: "📄" },
-          ],
-        },
-        {
-          title: "Custom Stationery",
-          items: [
-            { name: "Personalized Journals", icon: "📖" },
-            { name: "Planners", icon: "🗓️" },
-            { name: "Custom Calendars", icon: "📅" },
-            { name: "Reminder Notepads", icon: "🗒️" },
-          ],
-        },
-      ],
-      "Marketing Materials": [
-        {
-          title: "Promotional Items",
-          items: [
-            { name: "Flyers & Brochures", icon: "📄" },
-            { name: "Postcards", icon: "📮" },
-            { name: "Door Hangers", icon: "🚪" },
-            { name: "Sales Sheets", icon: "📊" },
-          ],
-        },
-        {
-          title: "Signage",
-          items: [
-            { name: "Event Banners", icon: "🎪" },
-            { name: "Yard Signs", icon: "🪧" },
-            { name: "Storefront Window Decals", icon: "🏪" },
-            { name: "A-frame Signs", icon: "🔺" },
-          ],
-        },
-        {
-          title: "Event Materials",
-          items: [
-            { name: "Step & Repeat Backdrops", icon: "🎬" },
-            { name: "Table Covers", icon: "🏓" },
-            { name: "Custom Tickets", icon: "🎫" },
-            { name: "Badges & Wristbands", icon: "🏷️" },
-          ],
-        },
-        {
-          title: "Retail Packaging",
-          items: [
-            { name: "Hang Tags", icon: "🏷️" },
-            { name: "Branded Shopping Bags", icon: "🛍️" },
-            { name: "Thank You Cards", icon: "💌" },
-            { name: "Packaging Inserts", icon: "📦" },
-          ],
-        },
-      ],
-      "Specialty Items": [
-        {
-          title: "Apparel & Merch",
-          items: [
-            { name: "Custom T-Shirts", icon: "👕" },
-            { name: "Hoodies & Caps", icon: "🧢" },
-            { name: "Employee Uniforms", icon: "👔" },
-            { name: "Branded Tote Bags", icon: "👜" },
-          ],
-        },
-        {
-          title: "Gifts & Décor",
-          items: [
-            { name: "Custom Mugs", icon: "☕" },
-            { name: "Personalized Journals", icon: "📓" },
-            { name: "Photo Products", icon: "📸" },
-            { name: "Home Décor", icon: "🏠" },
-          ],
-        },
-        {
-          title: "Special Finishes",
-          items: [
-            { name: "Embossed Printing", icon: "✨" },
-            { name: "Foil Stamping", icon: "⭐" },
-            { name: "Raised UV Prints", icon: "🌟" },
-            { name: "Textured Papers", icon: "📜" },
-          ],
-        },
-        {
-          title: "Seasonal Items",
-          items: [
-            { name: "Holiday Cards", icon: "🎄" },
-            { name: "Christmas Decor", icon: "🎅" },
-            { name: "Valentine's Day", icon: "💝" },
-            { name: "New Year Cards", icon: "🎊" },
-          ],
-        },
-      ],
-      Industries: [
-        {
-          title: "Real Estate",
-          items: [
-            { name: "Open House Signs", icon: "🏠" },
-            { name: "For Sale Signs", icon: "🏷️" },
-            { name: "Property Info Flyers", icon: "📄" },
-            { name: "Key Hand-off Kits", icon: "🗝️" },
-          ],
-        },
-        {
-          title: "Healthcare & Legal",
-          items: [
-            { name: "Appointment Cards", icon: "⚕️" },
-            { name: "Prescription Pads", icon: "💊" },
-            { name: "Consent Forms", icon: "📋" },
-            { name: "Client Folders", icon: "📁" },
-          ],
-        },
-        {
-          title: "Wedding & Events",
-          items: [
-            { name: "Save-the-Date Cards", icon: "💌" },
-            { name: "Wedding Invitations", icon: "💍" },
-            { name: "Menus & Programs", icon: "🍽️" },
-            { name: "Table Numbers", icon: "🔢" },
-          ],
-        },
-        {
-          title: "Corporate",
-          items: [
-            { name: "Employee Badges", icon: "👔" },
-            { name: "Presentation Folders", icon: "📂" },
-            { name: "Conference Materials", icon: "🎤" },
-            { name: "Trade Show Displays", icon: "🖼️" },
-          ],
-        },
-      ],
-    };
-
-    return menuData[activeMenu as keyof typeof menuData] || [];
-  }
-
   const serviceCategories = [
     {
       title: "Business Essentials",
@@ -293,21 +134,7 @@ export default function HomePage() {
       ],
       color: "bg-red-50 border-red-200",
     },
-    {
-      title: "Apparel & Merch",
-      description: "Custom apparel and promotional merchandise",
-      services: [
-        "Custom T-Shirts, Hoodies, Caps",
-        "Employee Uniform Printing",
-        "Branded Tote Bags or Mugs",
-      ],
-      image_src: [
-        "/images/services/Apparel-Merch/Custom-T-Shirts-Hoodies-Caps.png",
-        "/images/services/Apparel-Merch/Uniform-Printing.png",
-        "/images/services/Apparel-Merch/BrandedToteBagsorMugs.png",
-      ],
-      color: "bg-indigo-50 border-indigo-200",
-    },
+
     {
       title: "Real Estate-Specific Materials",
       description: "Specialized printing for real estate professionals",
@@ -424,28 +251,8 @@ export default function HomePage() {
                 href="/"
                 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-green-600 bg-clip-text text-transparent"
               >
-                GotPrint
+                BayPrint
               </Link>
-              <nav className="hidden lg:flex space-x-6">
-                {[
-                  "Print Products",
-                  "Marketing Materials",
-                  "Specialty Items",
-                  "Industries",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="relative"
-                    onMouseEnter={() => setActiveMenu(item)}
-                    onMouseLeave={() => setActiveMenu(null)}
-                  >
-                    <button className="text-gray-700 hover:text-teal-600 flex items-center py-4 text-sm font-medium transition-colors duration-200 group">
-                      {item}
-                      <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" />
-                    </button>
-                  </div>
-                ))}
-              </nav>
             </div>
 
             <div className="flex items-center space-x-4">
@@ -462,16 +269,6 @@ export default function HomePage() {
 
               {/* User Actions */}
               <div className="flex items-center space-x-2 md:space-x-6">
-                <Button variant="ghost" size="sm" className="hidden md:flex">
-                  <User className="w-4 h-4 mr-1" />
-                  Account
-                </Button>
-                <Button variant="ghost" size="sm" className="relative">
-                  <ShoppingCart className="w-4 h-4" />
-                  <Badge className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-teal-600 text-white text-xs flex items-center justify-center">
-                    2
-                  </Badge>
-                </Button>
                 <Button
                   variant="default"
                   size="sm"
@@ -497,78 +294,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
-        {/* Enhanced Mega Menu */}
-        {activeMenu && (
-          <div
-            className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-200/50 shadow-xl z-40"
-            onMouseEnter={() => setActiveMenu(activeMenu)}
-            onMouseLeave={() => setActiveMenu(null)}
-          >
-            <div className="container mx-auto px-4 py-8">
-              <div className="grid grid-cols-12 gap-8">
-                <div className="col-span-9">
-                  <div className="grid grid-cols-4 gap-6">
-                    {getMenuCategories(activeMenu).map((category, index) => (
-                      <div key={index} className="space-y-4">
-                        <h3 className="font-semibold text-gray-900 text-lg border-b border-gray-200 pb-2">
-                          {category.title}
-                        </h3>
-                        <ul className="space-y-3">
-                          {category.items.map((item, itemIndex) => (
-                            <li key={itemIndex}>
-                              <Link
-                                href="#"
-                                className="group flex items-center space-x-3 text-gray-600 hover:text-teal-600 transition-colors duration-200"
-                              >
-                                <span className="text-lg">{item.icon}</span>
-                                <span className="text-sm group-hover:translate-x-1 transition-transform duration-200">
-                                  {item.name}
-                                </span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Featured Product Card */}
-                <div className="col-span-3">
-                  <Card className="overflow-hidden border-2 border-teal-100 bg-gradient-to-br from-teal-50 to-green-50">
-                    <CardContent className="p-6">
-                      <div className="flex items-center mb-3">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="ml-2 text-sm text-gray-600">
-                          4.9/5
-                        </span>
-                      </div>
-                      <h4 className="font-semibold text-gray-900 mb-2">
-                        Premium Business Cards
-                      </h4>
-                      <p className="text-sm text-gray-600 mb-4">
-                        Professional business cards on premium paper stock.
-                        Starting at $19.99 for 250 cards.
-                      </p>
-                      <Button
-                        size="sm"
-                        className="bg-teal-600 hover:bg-teal-700 text-white"
-                      >
-                        Order Now
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
@@ -929,112 +654,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-green-400 bg-clip-text text-transparent mb-4">
-                GotPrint
-              </div>
-              <p className="text-gray-400 mb-4">
-                Your trusted partner for all printing needs. Quality, speed, and
-                exceptional service for businesses of all sizes.
-              </p>
-              <div className="flex space-x-4">
-                <Phone className="w-5 h-5 text-teal-400" />
-                <span className="text-gray-400">1-800-GOT-PRINT</span>
-              </div>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Popular Services</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Business Cards
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Brochures
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Flyers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Banners
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Yard Signs
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Industries</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Real Estate
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Healthcare
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Legal
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Retail
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Events
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Support</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Help Center
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Order Status
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Returns
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Shipping Info
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className=" text-center text-gray-400">
             <p>&copy; 2024 GotPrint. All rights reserved.</p>
           </div>
         </div>
