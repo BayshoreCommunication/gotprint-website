@@ -304,8 +304,7 @@ export default function HomePage() {
       image_src: [
         "/images/services/Apparel-Merch/Custom-T-Shirts-Hoodies-Caps.png",
         "/images/services/Apparel-Merch/Uniform-Printing.png",
-        "/images/services/Apparel-Merch/HangTags.png",
-        "/images/services/Apparel-Merch/Branded-Shopping-Bags.png",
+        "/images/services/Apparel-Merch/BrandedToteBagsorMugs.png",
       ],
       color: "bg-indigo-50 border-indigo-200",
     },
