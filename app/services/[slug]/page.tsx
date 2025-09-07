@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,35 +6,40 @@ import { Phone, Star, CheckCircle, Shield, Truck, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import {} from "@/config/data";
+import { getServiceBySlug } from "@/lib/serviceData";
 
-interface ProductPageProps {
-  params: {
-    slug: string;
-  };
-}
+export default async function ProductPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const currentProduct = getServiceBySlug(slug);
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const productData = {
-    postcards: {
-      title: "Premium Postcards",
-      description:
-        "Create stunning, professional postcards that make a lasting impression. Perfect for direct mail campaigns, event promotions, and business marketing.",
-      image: "/placeholder.jpg",
-      basePrice: 29.75,
+  if (!currentProduct) {
+    return <div className="p-8 text-red-500">Service not found</div>;
+  }
+  // const productData = {
+  //   postcards: {
+  //     title: "Premium Postcards",
+  //     description:
+  //       "Create stunning, professional postcards that make a lasting impression. Perfect for direct mail campaigns, event promotions, and business marketing.",
+  //     image: "/placeholder.jpg",
+  //     basePrice: 29.75,
 
-      features: [
-        "Professional full-color printing",
-        "Multiple paper stock options",
-        "Fast turnaround times",
-        "Free design templates",
-        "Bulk quantity discounts",
-      ],
-    },
-  };
+  //     features: [
+  //       "Professional full-color printing",
+  //       "Multiple paper stock options",
+  //       "Fast turnaround times",
+  //       "Free design templates",
+  //       "Bulk quantity discounts",
+  //     ],
+  //   },
+  // };
 
-  const currentProduct =
-    productData[params.slug as keyof typeof productData] ||
-    productData.postcards;
+  // const currentProduct =
+  //   productData[params.slug as keyof typeof productData] ||
+  //   productData.postcards;
 
   return (
     <div className="min-h-screen bg-white py-16 lg:py-20">
@@ -58,7 +63,7 @@ export default function ProductPage({ params }: ProductPageProps) {
       <div className="container mx-auto px-4 md:px-8 lg:px-16 pt-8">
         <div className="grid lg:grid-cols-12 gap-8">
           {/* Product Image */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg">
               <Image
                 src={currentProduct.image}
@@ -72,7 +77,7 @@ export default function ProductPage({ params }: ProductPageProps) {
           </div>
 
           {/* Product Info */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-6">
             <div className="sticky top-24">
               <Card className="border-0 shadow-none ">
                 <CardContent className="space-y-6 ">
@@ -87,7 +92,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                     </p>
 
                     {/* Key Features */}
-                    <div className="space-y-2">
+                    {/* <div className="space-y-2">
                       {currentProduct.features.map((feature, index) => (
                         <div
                           key={index}
@@ -97,7 +102,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                           <span>{feature}</span>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Price Display */}
