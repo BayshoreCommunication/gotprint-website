@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, Target } from "lucide-react";
+import { ArrowRight, Phone, Target } from "lucide-react";
+import Link from "next/link";
 const CallToAction = () => {
   return (
     <div>
@@ -17,13 +18,13 @@ const CallToAction = () => {
               templates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+              <Link
+                href="/contact"
+                className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold flex items-center justify-center rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <Phone className="w-5 h-5 mr-2" />
                 Start Your Order
-              </Button>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
             </div>
           </div>
         </div>
