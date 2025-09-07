@@ -204,36 +204,6 @@ export default function HomePage() {
     },
   ];
 
-  const stats = [
-    { number: "500K+", label: "Happy Customers", icon: Users },
-    { number: "99.9%", label: "On-Time Delivery", icon: Clock },
-    { number: "24/7", label: "Customer Support", icon: HeartHandshake },
-    { number: "50+", label: "Print Products", icon: Package },
-  ];
-
-  const features = [
-    {
-      icon: Shield,
-      title: "Quality Guarantee",
-      description: "100% satisfaction guarantee on all our printing services",
-    },
-    {
-      icon: Zap,
-      title: "Fast Turnaround",
-      description: "Express printing options available for urgent orders",
-    },
-    {
-      icon: Truck,
-      title: "Free Shipping",
-      description: "Free shipping on orders over $75 across the US",
-    },
-    {
-      icon: Award,
-      title: "Award Winning",
-      description: "Recognized for excellence in printing quality and service",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       {/* Enhanced Header */}
@@ -244,7 +214,7 @@ export default function HomePage() {
             : "bg-white/90 backdrop-blur-sm border-b border-gray-200/30"
         }`}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
               <Link
@@ -262,7 +232,7 @@ export default function HomePage() {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <Input
                     placeholder="Search products..."
-                    className="pl-10 pr-4 py-2 w-64 bg-white/80 backdrop-blur-sm border-gray-200/50 focus:border-teal-300 focus:ring-teal-300/20"
+                    className="pl-10 pr-4 py-2 w-64 bg-white/80 backdrop-blur-sm border-gray-200/50 "
                   />
                 </div>
               </div>
@@ -298,7 +268,7 @@ export default function HomePage() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200/50 shadow-xl">
-            <div className="container mx-auto px-4 py-6">
+            <div className="container mx-auto px-4 md:px-8 lg:px-16 py-6">
               <div className="space-y-4">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
@@ -344,7 +314,7 @@ export default function HomePage() {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-200/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
 
-        <div className="relative container mx-auto px-4 pt-10">
+        <div className="relative container mx-auto px-4 md:px-8 lg:px-16 pt-10">
           <div className="grid lg:grid-cols-2 gap-10 items-center py-28">
             {/* Left Column - Content */}
             <div className="space-y-8">
@@ -468,58 +438,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      {/* <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <stat.icon className="w-8 h-8 text-white" />
-                  </div>
-                </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* Features Section */}
-      {/* <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose GotPrint?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We're committed to delivering exceptional printing services that exceed your expectations
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center group">
-                <div className="flex justify-center mb-6">
-                  <div className="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                    <feature.icon className="w-10 h-10 text-teal-600" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* Services Section */}
       <main className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Print Services
@@ -614,7 +535,7 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-teal-600 to-green-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your Print Project?
@@ -632,20 +553,6 @@ export default function HomePage() {
                 <Target className="w-5 h-5 mr-2" />
                 Start Your Order
               </Button>
-              {/* <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 text-lg font-semibold"
-              >
-                Browse Templates
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 text-lg font-semibold"
-              >
-                Request Quote
-              </Button> */}
             </div>
           </div>
         </div>
@@ -653,7 +560,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className=" text-center text-gray-400">
             <p>&copy; 2024 GotPrint. All rights reserved.</p>
           </div>

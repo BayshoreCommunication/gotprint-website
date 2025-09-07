@@ -205,7 +205,7 @@ export default function ProductPage({ params }: ProductPageProps) {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
               <Link
@@ -256,7 +256,7 @@ export default function ProductPage({ params }: ProductPageProps) {
 
       {/* Breadcrumb */}
       <div className="bg-white/60 backdrop-blur-sm py-3 border-b border-gray-100">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <nav className="flex items-center space-x-2 text-sm">
             <Link
               href="/"
@@ -277,7 +277,7 @@ export default function ProductPage({ params }: ProductPageProps) {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 py-8">
         <div className="grid lg:grid-cols-12 gap-8">
           {/* Product Images & Info */}
           <div className="lg:col-span-7 space-y-6">

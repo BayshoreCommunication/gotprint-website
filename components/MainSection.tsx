@@ -60,7 +60,7 @@ export default function MainSection() {
 
   return (
     <main className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Our Print Services

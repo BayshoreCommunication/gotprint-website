@@ -6,7 +6,7 @@ const CallToAction = () => {
     <div>
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-teal-600 to-green-600 text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your Print Project?
